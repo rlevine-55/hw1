@@ -170,9 +170,119 @@ INSERT INTO movies (
     year_released,
     mpaa_rating
 ) VALUES (
-    "BATMAN Begins",
+    "Batman Begins",
     2005,
     "PG-13"
+);
+
+INSERT INTO movies (
+    title,
+    year_released,
+    mpaa_rating
+) VALUES (
+    "The Dark Night",
+    2008,
+    "PG-13"
+);
+
+INSERT INTO movies (
+    title,
+    year_released,
+    mpaa_rating
+) VALUES (
+    "The Dark Night Rises",
+    2012,
+    "PG-13"
+);
+
+INSERT INTO studios (
+    name
+) VALUES (
+    "Warner Bros."
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+) VALUES (
+    "Christian",
+    "Bale"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+) VALUES (
+    "Michael",
+    "Caine"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+) VALUES (
+    "Liam",
+    "Neeson"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+) VALUES (
+    "Katie",
+    "Holmes"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+) VALUES (
+    "Gary",
+    "Oldman"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+) VALUES (
+    "Heath",
+    "Ledger"
+);
+
+INSERT INTO characters (
+    name
+) VALUES (
+    "Bruce Wayne"
+);
+
+INSERT INTO characters (
+    name
+) VALUES (
+    "Alfred"
+);
+
+INSERT INTO characters (
+    name
+) VALUES (
+    "Ra's Al Ghul"
+);
+
+INSERT INTO characters (
+    name
+) VALUES (
+    "Rachel Dawes"
+);
+
+INSERT INTO characters (
+    name
+) VALUES (
+    "Commissioner Gordon"
+);
+
+INSERT INTO characters (
+    name
+) VALUES (
+    "Joker"
 );
 
 .print "Movies"
