@@ -180,7 +180,7 @@ INSERT INTO movies (
     year_released,
     mpaa_rating
 ) VALUES (
-    "The Dark Night",
+    "The Dark Knight",
     2008,
     "PG-13"
 );
@@ -190,7 +190,7 @@ INSERT INTO movies (
     year_released,
     mpaa_rating
 ) VALUES (
-    "The Dark Night Rises",
+    "The Dark Knight Rises",
     2012,
     "PG-13"
 );
@@ -288,6 +288,11 @@ INSERT INTO characters (
 .print "Movies"
 .print "======"
 .print ""
+
+SELECT movies.title, movies.year_released, movies.mpaa_rating, studios.name
+FROM movies
+INNER JOIN studios ON movies.studio_ID = studios.name;
+--NEED to figure out why the above isn't working
 
 .print ""
 .print "Top Cast"
