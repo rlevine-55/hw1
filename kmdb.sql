@@ -256,39 +256,63 @@ INSERT INTO actors (
 );
 
 INSERT INTO characters (
-    name
+    name,
+    actor_ID,
+    movie_ID
 ) VALUES (
-    "Bruce Wayne"
+    "Bruce Wayne",
+    1,
+    1
 );
 
 INSERT INTO characters (
-    name
+    name,
+    actor_ID,
+    movie_ID
 ) VALUES (
-    "Alfred"
+    "Alfred",
+    2,
+    2
 );
 
 INSERT INTO characters (
-    name
+    name,
+    actor_ID,
+    movie_ID
 ) VALUES (
-    "Ra's Al Ghul"
+    "Ra's Al Ghul",
+    3,
+    3
 );
 
 INSERT INTO characters (
-    name
+    name,
+    actor_ID,
+    movie_ID
 ) VALUES (
-    "Rachel Dawes"
+    "Rachel Dawes",
+    4,
+    4
 );
 
 INSERT INTO characters (
-    name
+    name,
+    actor_ID,
+    movie_ID
 ) VALUES (
-    "Commissioner Gordon"
+    "Commissioner Gordon",
+    5,
+    5
 );
 
 INSERT INTO characters (
-    name
+    name,
+    actor_ID,
+    movie_ID
 ) VALUES (
-    "Joker"
+    "Joker",
+    6,
+    6
 );
 
 .print "Movies"
@@ -298,9 +322,13 @@ INSERT INTO characters (
 SELECT movies.title, movies.year_released, movies.mpaa_rating, studios.name
 FROM movies
 INNER JOIN studios ON studios.ID = movies.studio_ID;
---NEED to figure out why the above isn't working
 
 .print ""
 .print "Top Cast"
 .print "========"
 .print ""
+
+SELECT movies.title, actors.first_name, actors.last_name, characters.name
+FROM characters
+INNER JOIN movies ON characters.movie_ID = movies.ID
+INNER JOIN actors ON characters.actor_ID = actors.ID;
