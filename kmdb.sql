@@ -168,31 +168,37 @@ CREATE TABLE characters (
 INSERT INTO movies (
     title,
     year_released,
-    mpaa_rating
+    mpaa_rating,
+    studio_ID
 ) VALUES (
     "Batman Begins",
     2005,
-    "PG-13"
+    "PG-13",
+    1
 );
 
 INSERT INTO movies (
     title,
     year_released,
-    mpaa_rating
+    mpaa_rating,
+    studio_ID
 ) VALUES (
     "The Dark Knight",
     2008,
-    "PG-13"
+    "PG-13",
+    1
 );
 
 INSERT INTO movies (
     title,
     year_released,
-    mpaa_rating
+    mpaa_rating,
+    studio_ID
 ) VALUES (
     "The Dark Knight Rises",
     2012,
-    "PG-13"
+    "PG-13",
+    1
 );
 
 INSERT INTO studios (
@@ -291,7 +297,7 @@ INSERT INTO characters (
 
 SELECT movies.title, movies.year_released, movies.mpaa_rating, studios.name
 FROM movies
-INNER JOIN studios ON movies.studio_ID = studios.name;
+INNER JOIN studios ON studios.ID = movies.studio_ID;
 --NEED to figure out why the above isn't working
 
 .print ""
